@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C90CC7DC1F90602C006A0BEB /* EfiteSpeechTestViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90CC7DB1F90602C006A0BEB /* EfiteSpeechTestViewController_iPad.xib */; };
+		C90CC7DE1F91BBFF006A0BEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90CC7DD1F91BBFF006A0BEB /* Default-568h@2x.png */; };
+		C90CC7E01F928A17006A0BEB /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = C90CC7DF1F928A17006A0BEB /* Icon-1024.png */; };
+		C917AB151564C7AB007C3ACE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917AB141564C7AB007C3ACE /* UIKit.framework */; };
+		C917AB171564C7AB007C3ACE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917AB161564C7AB007C3ACE /* Foundation.framework */; };
+		C917AB191564C7AB007C3ACE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917AB181564C7AB007C3ACE /* CoreGraphics.framework */; };
+		C917AB1F1564C7AB007C3ACE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C917AB1D1564C7AB007C3ACE /* InfoPlist.strings */; };
+		C917AB211564C7AB007C3ACE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C917AB201564C7AB007C3ACE /* main.m */; };
+		C917AB251564C7AC007C3ACE /* EfiteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C917AB241564C7AC007C3ACE /* EfiteAppDelegate.m */; };
+		C917AB281564C7AC007C3ACE /* EfiteMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C917AB271564C7AC007C3ACE /* EfiteMainViewController.m */; };
+		C917AB2B1564C7AC007C3ACE /* EfiteFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C917AB2A1564C7AC007C3ACE /* EfiteFlipsideViewController.m */; };
+		C917AB2E1564C7AC007C3ACE /* EfiteMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C917AB2C1564C7AC007C3ACE /* EfiteMainViewController_iPhone.xib */; };
+		C917AB311564C7AC007C3ACE /* EfiteMainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C917AB2F1564C7AC007C3ACE /* EfiteMainViewController_iPad.xib */; };
+		C917AB341564C7AC007C3ACE /* EfiteFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C917AB321564C7AC007C3ACE /* EfiteFlipsideViewController.xib */; };
+		C917ABD31564DCBA007C3ACE /* EfiteToc.plist in Resources */ = {isa = PBXBuildFile; fileRef = C917ABD21564DCBA007C3ACE /* EfiteToc.plist */; };
+		C917ABD715662104007C3ACE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C917ABD615662103007C3ACE /* Icon@2x.png */; };
+		C917ABD915662111007C3ACE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C917ABD815662111007C3ACE /* Icon.png */; };
+		C917ABDB1566211B007C3ACE /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C917ABDA1566211B007C3ACE /* Icon-512.png */; };
+		C917ABDD15662126007C3ACE /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C917ABDC15662126007C3ACE /* Icon-72.png */; };
+		C9259BB51F8C859700194C2A /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9259BB41F8C859700194C2A /* Speech.framework */; };
+		C9259BBB1F8C92F900194C2A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9259BBA1F8C92F800194C2A /* AVFoundation.framework */; };
+		C960916617769D860073D5A1 /* EFITE2_ibook-page1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911817769D860073D5A1 /* EFITE2_ibook-page1.pdf */; };
+		C960916717769D860073D5A1 /* EFITE2_ibook-page2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911917769D860073D5A1 /* EFITE2_ibook-page2.pdf */; };
+		C960916817769D860073D5A1 /* EFITE2_ibook-page3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911A17769D860073D5A1 /* EFITE2_ibook-page3.pdf */; };
+		C960916917769D860073D5A1 /* EFITE2_ibook-page4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911B17769D860073D5A1 /* EFITE2_ibook-page4.pdf */; };
+		C960916A17769D860073D5A1 /* EFITE2_ibook-page5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911C17769D860073D5A1 /* EFITE2_ibook-page5.pdf */; };
+		C960916B17769D860073D5A1 /* EFITE2_ibook-page6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911D17769D860073D5A1 /* EFITE2_ibook-page6.pdf */; };
+		C960916C17769D860073D5A1 /* EFITE2_ibook-page7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911E17769D860073D5A1 /* EFITE2_ibook-page7.pdf */; };
+		C960916D17769D860073D5A1 /* EFITE2_ibook-page8.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960911F17769D860073D5A1 /* EFITE2_ibook-page8.pdf */; };
+		C960916E17769D860073D5A1 /* EFITE2_ibook-page9.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912017769D860073D5A1 /* EFITE2_ibook-page9.pdf */; };
+		C960916F17769D860073D5A1 /* EFITE2_ibook-page10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912117769D860073D5A1 /* EFITE2_ibook-page10.pdf */; };
+		C960917017769D860073D5A1 /* EFITE2_ibook-page11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912217769D860073D5A1 /* EFITE2_ibook-page11.pdf */; };
+		C960917117769D860073D5A1 /* EFITE2_ibook-page12.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912317769D860073D5A1 /* EFITE2_ibook-page12.pdf */; };
+		C960917217769D860073D5A1 /* EFITE2_ibook-page13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912417769D860073D5A1 /* EFITE2_ibook-page13.pdf */; };
+		C960917317769D860073D5A1 /* EFITE2_ibook-page14.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912517769D860073D5A1 /* EFITE2_ibook-page14.pdf */; };
+		C960917417769D860073D5A1 /* EFITE2_ibook-page15.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912617769D860073D5A1 /* EFITE2_ibook-page15.pdf */; };
+		C960917517769D860073D5A1 /* EFITE2_ibook-page16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912717769D860073D5A1 /* EFITE2_ibook-page16.pdf */; };
+		C960917617769D860073D5A1 /* EFITE2_ibook-page17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912817769D860073D5A1 /* EFITE2_ibook-page17.pdf */; };
+		C960917717769D860073D5A1 /* EFITE2_ibook-page18.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912917769D860073D5A1 /* EFITE2_ibook-page18.pdf */; };
+		C960917817769D860073D5A1 /* EFITE2_ibook-page19.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912A17769D860073D5A1 /* EFITE2_ibook-page19.pdf */; };
+		C960917917769D860073D5A1 /* EFITE2_ibook-page20.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912B17769D860073D5A1 /* EFITE2_ibook-page20.pdf */; };
+		C960917A17769D860073D5A1 /* EFITE2_ibook-page21.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912C17769D860073D5A1 /* EFITE2_ibook-page21.pdf */; };
+		C960917B17769D860073D5A1 /* EFITE2_ibook-page22.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912D17769D860073D5A1 /* EFITE2_ibook-page22.pdf */; };
+		C960917C17769D860073D5A1 /* EFITE2_ibook-page23.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912E17769D860073D5A1 /* EFITE2_ibook-page23.pdf */; };
+		C960917D17769D860073D5A1 /* EFITE2_ibook-page24.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960912F17769D860073D5A1 /* EFITE2_ibook-page24.pdf */; };
+		C960917E17769D860073D5A1 /* EFITE2_ibook-page25.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913017769D860073D5A1 /* EFITE2_ibook-page25.pdf */; };
+		C960917F17769D860073D5A1 /* EFITE2_ibook-page26.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913117769D860073D5A1 /* EFITE2_ibook-page26.pdf */; };
+		C960918017769D860073D5A1 /* EFITE2_ibook-page27.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913217769D860073D5A1 /* EFITE2_ibook-page27.pdf */; };
+		C960918117769D860073D5A1 /* EFITE2_ibook-page28.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913317769D860073D5A1 /* EFITE2_ibook-page28.pdf */; };
+		C960918217769D860073D5A1 /* EFITE2_ibook-page29.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913417769D860073D5A1 /* EFITE2_ibook-page29.pdf */; };
+		C960918317769D860073D5A1 /* EFITE2_ibook-page30.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913517769D860073D5A1 /* EFITE2_ibook-page30.pdf */; };
+		C960918417769D860073D5A1 /* EFITE2_ibook-page31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913617769D860073D5A1 /* EFITE2_ibook-page31.pdf */; };
+		C960918517769D860073D5A1 /* EFITE2_ibook-page32.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913717769D860073D5A1 /* EFITE2_ibook-page32.pdf */; };
+		C960918617769D860073D5A1 /* EFITE2_ibook-page33.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913817769D860073D5A1 /* EFITE2_ibook-page33.pdf */; };
+		C960918717769D860073D5A1 /* EFITE2_ibook-page34.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913917769D860073D5A1 /* EFITE2_ibook-page34.pdf */; };
+		C960918817769D860073D5A1 /* EFITE2_ibook-page35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913A17769D860073D5A1 /* EFITE2_ibook-page35.pdf */; };
+		C960918917769D860073D5A1 /* EFITE2_ibook-page36.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913B17769D860073D5A1 /* EFITE2_ibook-page36.pdf */; };
+		C960918A17769D860073D5A1 /* EFITE2_ibook-page37.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913C17769D860073D5A1 /* EFITE2_ibook-page37.pdf */; };
+		C960918B17769D860073D5A1 /* EFITE2_ibook-page38.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913D17769D860073D5A1 /* EFITE2_ibook-page38.pdf */; };
+		C960918C17769D860073D5A1 /* EFITE2_ibook-page39.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913E17769D860073D5A1 /* EFITE2_ibook-page39.pdf */; };
+		C960918D17769D860073D5A1 /* EFITE2_ibook-page40.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960913F17769D860073D5A1 /* EFITE2_ibook-page40.pdf */; };
+		C960918E17769D860073D5A1 /* EFITE2_ibook-page41.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914017769D860073D5A1 /* EFITE2_ibook-page41.pdf */; };
+		C960918F17769D860073D5A1 /* EFITE2_ibook-page42.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914117769D860073D5A1 /* EFITE2_ibook-page42.pdf */; };
+		C960919017769D860073D5A1 /* EFITE2_ibook-page43.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914217769D860073D5A1 /* EFITE2_ibook-page43.pdf */; };
+		C960919117769D860073D5A1 /* EFITE2_ibook-page44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914317769D860073D5A1 /* EFITE2_ibook-page44.pdf */; };
+		C960919217769D860073D5A1 /* EFITE2_ibook-page45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914417769D860073D5A1 /* EFITE2_ibook-page45.pdf */; };
+		C960919317769D860073D5A1 /* EFITE2_ibook-page46.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914517769D860073D5A1 /* EFITE2_ibook-page46.pdf */; };
+		C960919417769D860073D5A1 /* EFITE2_ibook-page47.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914617769D860073D5A1 /* EFITE2_ibook-page47.pdf */; };
+		C960919517769D860073D5A1 /* EFITE2_ibook-page48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914717769D860073D5A1 /* EFITE2_ibook-page48.pdf */; };
+		C960919617769D860073D5A1 /* EFITE2_ibook-page49.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914817769D860073D5A1 /* EFITE2_ibook-page49.pdf */; };
+		C960919717769D860073D5A1 /* EFITE2_ibook-page50.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914917769D860073D5A1 /* EFITE2_ibook-page50.pdf */; };
+		C960919817769D860073D5A1 /* EFITE2_ibook-page51.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914A17769D860073D5A1 /* EFITE2_ibook-page51.pdf */; };
+		C960919917769D860073D5A1 /* EFITE2_ibook-page52.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914B17769D860073D5A1 /* EFITE2_ibook-page52.pdf */; };
+		C960919A17769D860073D5A1 /* EFITE2_ibook-page53.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914C17769D860073D5A1 /* EFITE2_ibook-page53.pdf */; };
+		C960919B17769D860073D5A1 /* EFITE2_ibook-page54.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914D17769D860073D5A1 /* EFITE2_ibook-page54.pdf */; };
+		C960919C17769D860073D5A1 /* EFITE2_ibook-page55.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914E17769D860073D5A1 /* EFITE2_ibook-page55.pdf */; };
+		C960919D17769D860073D5A1 /* EFITE2_ibook-page56.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960914F17769D860073D5A1 /* EFITE2_ibook-page56.pdf */; };
+		C960919E17769D860073D5A1 /* EFITE2_ibook-page57.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915017769D860073D5A1 /* EFITE2_ibook-page57.pdf */; };
+		C960919F17769D860073D5A1 /* EFITE2_ibook-page58.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915117769D860073D5A1 /* EFITE2_ibook-page58.pdf */; };
+		C96091A017769D860073D5A1 /* EFITE2_ibook-page59.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915217769D860073D5A1 /* EFITE2_ibook-page59.pdf */; };
+		C96091A117769D860073D5A1 /* EFITE2_ibook-page60.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915317769D860073D5A1 /* EFITE2_ibook-page60.pdf */; };
+		C96091A217769D860073D5A1 /* EFITE2_ibook-page61.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915417769D860073D5A1 /* EFITE2_ibook-page61.pdf */; };
+		C96091A317769D860073D5A1 /* EFITE2_ibook-page62.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915517769D860073D5A1 /* EFITE2_ibook-page62.pdf */; };
+		C96091A417769D860073D5A1 /* EFITE2_ibook-page63.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915617769D860073D5A1 /* EFITE2_ibook-page63.pdf */; };
+		C96091A517769D860073D5A1 /* EFITE2_ibook-page64.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915717769D860073D5A1 /* EFITE2_ibook-page64.pdf */; };
+		C96091A617769D860073D5A1 /* EFITE2_ibook-page65.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915817769D860073D5A1 /* EFITE2_ibook-page65.pdf */; };
+		C96091A717769D860073D5A1 /* EFITE2_ibook-page66.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915917769D860073D5A1 /* EFITE2_ibook-page66.pdf */; };
+		C96091A817769D860073D5A1 /* EFITE2_ibook-page67.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915A17769D860073D5A1 /* EFITE2_ibook-page67.pdf */; };
+		C96091A917769D860073D5A1 /* EFITE2_ibook-page68.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915B17769D860073D5A1 /* EFITE2_ibook-page68.pdf */; };
+		C96091AA17769D860073D5A1 /* EFITE2_ibook-page69.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915C17769D860073D5A1 /* EFITE2_ibook-page69.pdf */; };
+		C96091AB17769D860073D5A1 /* EFITE2_ibook-page70.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915D17769D860073D5A1 /* EFITE2_ibook-page70.pdf */; };
+		C96091AC17769D860073D5A1 /* EFITE2_ibook-page71.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915E17769D860073D5A1 /* EFITE2_ibook-page71.pdf */; };
+		C96091AD17769D860073D5A1 /* EFITE2_ibook-page72.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960915F17769D860073D5A1 /* EFITE2_ibook-page72.pdf */; };
+		C96091AE17769D860073D5A1 /* EFITE2_ibook-page73.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960916017769D860073D5A1 /* EFITE2_ibook-page73.pdf */; };
+		C96091AF17769D860073D5A1 /* EFITE2_ibook-page74.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960916117769D860073D5A1 /* EFITE2_ibook-page74.pdf */; };
+		C96091B017769D860073D5A1 /* EFITE2_ibook-page75.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960916217769D860073D5A1 /* EFITE2_ibook-page75.pdf */; };
+		C96091B117769D860073D5A1 /* EFITE2_ibook-page76.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960916317769D860073D5A1 /* EFITE2_ibook-page76.pdf */; };
+		C96091B217769D860073D5A1 /* EFITE2_ibook-page77.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960916417769D860073D5A1 /* EFITE2_ibook-page77.pdf */; };
+		C96091B317769D860073D5A1 /* EFITE2_ibook-page78.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C960916517769D860073D5A1 /* EFITE2_ibook-page78.pdf */; };
+		C96B297E1F8ABCFD0067C15A /* EfiteSpeechTestViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96B297D1F8ABCFD0067C15A /* EfiteSpeechTestViewController_iPhone.xib */; };
+		C96B29811F8ABDB30067C15A /* EfiteSpeechTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96B29801F8ABDB30067C15A /* EfiteSpeechTestViewController.m */; };
+		C96B29831F8ABF400067C15A /* EfiteSpeechTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96B29821F8ABF400067C15A /* EfiteSpeechTest.plist */; };
+		C97094381FDE650700B875DD /* Default-Landscape-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C97094371FDE650600B875DD /* Default-Landscape-812h@3x.png */; };
+		C970943A1FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C97094391FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png */; };
+		C9A2B93815686FFB00BBA72C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A2B93715686FFB00BBA72C /* Icon-72@2x.png */; };
+		C9A2B9401568765900BBA72C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A2B93F1568765900BBA72C /* Default-Landscape~ipad.png */; };
+		C9EA1DA71E7E415200B82449 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DA61E7E415100B82449 /* Images.xcassets */; };
+		C9EA1DA91E7E477E00B82449 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DA81E7E477E00B82449 /* Icon-76.png */; };
+		C9EA1DAD1E7E47B300B82449 /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DAC1E7E47B300B82449 /* Icon-152.png */; };
+		C9EA1DAF1E7E4BD300B82449 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DAE1E7E4BD300B82449 /* Icon-120.png */; };
+		C9F36D401751A5B800A481E8 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F36D3F1751A5B800A481E8 /* Default-Landscape.png */; };
+		C9F36D421751B29900A481E8 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F36D411751B29900A481E8 /* Default-Landscape@2x.png */; };
+		C9F36D441751B47400A481E8 /* Default-Landscape-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F36D431751B47400A481E8 /* Default-Landscape-568h@2x.png */; };
+		C9F6AD30177BEF8700B3908A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9F6AD2F177BEF8700B3908A /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C90CC7DB1F90602C006A0BEB /* EfiteSpeechTestViewController_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EfiteSpeechTestViewController_iPad.xib; sourceTree = "<group>"; };
+		C90CC7DD1F91BBFF006A0BEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C90CC7DF1F928A17006A0BEB /* Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1024.png"; sourceTree = SOURCE_ROOT; };
+		C917AB101564C7AB007C3ACE /* EfiteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EfiteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C917AB141564C7AB007C3ACE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C917AB161564C7AB007C3ACE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C917AB181564C7AB007C3ACE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C917AB1C1564C7AB007C3ACE /* EfiteBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EfiteBook-Info.plist"; sourceTree = "<group>"; };
+		C917AB1E1564C7AB007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C917AB201564C7AB007C3ACE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C917AB221564C7AB007C3ACE /* EfiteBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EfiteBook-Prefix.pch"; sourceTree = "<group>"; };
+		C917AB231564C7AC007C3ACE /* EfiteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EfiteAppDelegate.h; sourceTree = "<group>"; };
+		C917AB241564C7AC007C3ACE /* EfiteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfiteAppDelegate.m; sourceTree = "<group>"; };
+		C917AB261564C7AC007C3ACE /* EfiteMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EfiteMainViewController.h; sourceTree = "<group>"; };
+		C917AB271564C7AC007C3ACE /* EfiteMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfiteMainViewController.m; sourceTree = "<group>"; };
+		C917AB291564C7AC007C3ACE /* EfiteFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EfiteFlipsideViewController.h; sourceTree = "<group>"; };
+		C917AB2A1564C7AC007C3ACE /* EfiteFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfiteFlipsideViewController.m; sourceTree = "<group>"; };
+		C917AB2D1564C7AC007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EfiteMainViewController_iPhone.xib; sourceTree = "<group>"; };
+		C917AB301564C7AC007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EfiteMainViewController_iPad.xib; sourceTree = "<group>"; };
+		C917AB331564C7AC007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EfiteFlipsideViewController.xib; sourceTree = "<group>"; };
+		C917ABD21564DCBA007C3ACE /* EfiteToc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EfiteToc.plist; sourceTree = "<group>"; };
+		C917ABD615662103007C3ACE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		C917ABD815662111007C3ACE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C917ABDA1566211B007C3ACE /* Icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-512.png"; sourceTree = "<group>"; };
+		C917ABDC15662126007C3ACE /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		C9259BB41F8C859700194C2A /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		C9259BB61F8C92D300194C2A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		C9259BB81F8C92E600194C2A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C9259BBA1F8C92F800194C2A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C960911817769D860073D5A1 /* EFITE2_ibook-page1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page1.pdf"; sourceTree = "<group>"; };
+		C960911917769D860073D5A1 /* EFITE2_ibook-page2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page2.pdf"; sourceTree = "<group>"; };
+		C960911A17769D860073D5A1 /* EFITE2_ibook-page3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page3.pdf"; sourceTree = "<group>"; };
+		C960911B17769D860073D5A1 /* EFITE2_ibook-page4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page4.pdf"; sourceTree = "<group>"; };
+		C960911C17769D860073D5A1 /* EFITE2_ibook-page5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page5.pdf"; sourceTree = "<group>"; };
+		C960911D17769D860073D5A1 /* EFITE2_ibook-page6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page6.pdf"; sourceTree = "<group>"; };
+		C960911E17769D860073D5A1 /* EFITE2_ibook-page7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page7.pdf"; sourceTree = "<group>"; };
+		C960911F17769D860073D5A1 /* EFITE2_ibook-page8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page8.pdf"; sourceTree = "<group>"; };
+		C960912017769D860073D5A1 /* EFITE2_ibook-page9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page9.pdf"; sourceTree = "<group>"; };
+		C960912117769D860073D5A1 /* EFITE2_ibook-page10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page10.pdf"; sourceTree = "<group>"; };
+		C960912217769D860073D5A1 /* EFITE2_ibook-page11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page11.pdf"; sourceTree = "<group>"; };
+		C960912317769D860073D5A1 /* EFITE2_ibook-page12.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page12.pdf"; sourceTree = "<group>"; };
+		C960912417769D860073D5A1 /* EFITE2_ibook-page13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page13.pdf"; sourceTree = "<group>"; };
+		C960912517769D860073D5A1 /* EFITE2_ibook-page14.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page14.pdf"; sourceTree = "<group>"; };
+		C960912617769D860073D5A1 /* EFITE2_ibook-page15.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page15.pdf"; sourceTree = "<group>"; };
+		C960912717769D860073D5A1 /* EFITE2_ibook-page16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page16.pdf"; sourceTree = "<group>"; };
+		C960912817769D860073D5A1 /* EFITE2_ibook-page17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page17.pdf"; sourceTree = "<group>"; };
+		C960912917769D860073D5A1 /* EFITE2_ibook-page18.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page18.pdf"; sourceTree = "<group>"; };
+		C960912A17769D860073D5A1 /* EFITE2_ibook-page19.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page19.pdf"; sourceTree = "<group>"; };
+		C960912B17769D860073D5A1 /* EFITE2_ibook-page20.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page20.pdf"; sourceTree = "<group>"; };
+		C960912C17769D860073D5A1 /* EFITE2_ibook-page21.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page21.pdf"; sourceTree = "<group>"; };
+		C960912D17769D860073D5A1 /* EFITE2_ibook-page22.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page22.pdf"; sourceTree = "<group>"; };
+		C960912E17769D860073D5A1 /* EFITE2_ibook-page23.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page23.pdf"; sourceTree = "<group>"; };
+		C960912F17769D860073D5A1 /* EFITE2_ibook-page24.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page24.pdf"; sourceTree = "<group>"; };
+		C960913017769D860073D5A1 /* EFITE2_ibook-page25.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page25.pdf"; sourceTree = "<group>"; };
+		C960913117769D860073D5A1 /* EFITE2_ibook-page26.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page26.pdf"; sourceTree = "<group>"; };
+		C960913217769D860073D5A1 /* EFITE2_ibook-page27.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page27.pdf"; sourceTree = "<group>"; };
+		C960913317769D860073D5A1 /* EFITE2_ibook-page28.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page28.pdf"; sourceTree = "<group>"; };
+		C960913417769D860073D5A1 /* EFITE2_ibook-page29.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page29.pdf"; sourceTree = "<group>"; };
+		C960913517769D860073D5A1 /* EFITE2_ibook-page30.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page30.pdf"; sourceTree = "<group>"; };
+		C960913617769D860073D5A1 /* EFITE2_ibook-page31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page31.pdf"; sourceTree = "<group>"; };
+		C960913717769D860073D5A1 /* EFITE2_ibook-page32.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page32.pdf"; sourceTree = "<group>"; };
+		C960913817769D860073D5A1 /* EFITE2_ibook-page33.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page33.pdf"; sourceTree = "<group>"; };
+		C960913917769D860073D5A1 /* EFITE2_ibook-page34.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page34.pdf"; sourceTree = "<group>"; };
+		C960913A17769D860073D5A1 /* EFITE2_ibook-page35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page35.pdf"; sourceTree = "<group>"; };
+		C960913B17769D860073D5A1 /* EFITE2_ibook-page36.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page36.pdf"; sourceTree = "<group>"; };
+		C960913C17769D860073D5A1 /* EFITE2_ibook-page37.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page37.pdf"; sourceTree = "<group>"; };
+		C960913D17769D860073D5A1 /* EFITE2_ibook-page38.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page38.pdf"; sourceTree = "<group>"; };
+		C960913E17769D860073D5A1 /* EFITE2_ibook-page39.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page39.pdf"; sourceTree = "<group>"; };
+		C960913F17769D860073D5A1 /* EFITE2_ibook-page40.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page40.pdf"; sourceTree = "<group>"; };
+		C960914017769D860073D5A1 /* EFITE2_ibook-page41.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page41.pdf"; sourceTree = "<group>"; };
+		C960914117769D860073D5A1 /* EFITE2_ibook-page42.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page42.pdf"; sourceTree = "<group>"; };
+		C960914217769D860073D5A1 /* EFITE2_ibook-page43.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page43.pdf"; sourceTree = "<group>"; };
+		C960914317769D860073D5A1 /* EFITE2_ibook-page44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page44.pdf"; sourceTree = "<group>"; };
+		C960914417769D860073D5A1 /* EFITE2_ibook-page45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page45.pdf"; sourceTree = "<group>"; };
+		C960914517769D860073D5A1 /* EFITE2_ibook-page46.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page46.pdf"; sourceTree = "<group>"; };
+		C960914617769D860073D5A1 /* EFITE2_ibook-page47.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page47.pdf"; sourceTree = "<group>"; };
+		C960914717769D860073D5A1 /* EFITE2_ibook-page48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page48.pdf"; sourceTree = "<group>"; };
+		C960914817769D860073D5A1 /* EFITE2_ibook-page49.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page49.pdf"; sourceTree = "<group>"; };
+		C960914917769D860073D5A1 /* EFITE2_ibook-page50.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page50.pdf"; sourceTree = "<group>"; };
+		C960914A17769D860073D5A1 /* EFITE2_ibook-page51.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page51.pdf"; sourceTree = "<group>"; };
+		C960914B17769D860073D5A1 /* EFITE2_ibook-page52.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page52.pdf"; sourceTree = "<group>"; };
+		C960914C17769D860073D5A1 /* EFITE2_ibook-page53.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page53.pdf"; sourceTree = "<group>"; };
+		C960914D17769D860073D5A1 /* EFITE2_ibook-page54.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page54.pdf"; sourceTree = "<group>"; };
+		C960914E17769D860073D5A1 /* EFITE2_ibook-page55.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page55.pdf"; sourceTree = "<group>"; };
+		C960914F17769D860073D5A1 /* EFITE2_ibook-page56.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page56.pdf"; sourceTree = "<group>"; };
+		C960915017769D860073D5A1 /* EFITE2_ibook-page57.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page57.pdf"; sourceTree = "<group>"; };
+		C960915117769D860073D5A1 /* EFITE2_ibook-page58.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page58.pdf"; sourceTree = "<group>"; };
+		C960915217769D860073D5A1 /* EFITE2_ibook-page59.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page59.pdf"; sourceTree = "<group>"; };
+		C960915317769D860073D5A1 /* EFITE2_ibook-page60.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page60.pdf"; sourceTree = "<group>"; };
+		C960915417769D860073D5A1 /* EFITE2_ibook-page61.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page61.pdf"; sourceTree = "<group>"; };
+		C960915517769D860073D5A1 /* EFITE2_ibook-page62.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page62.pdf"; sourceTree = "<group>"; };
+		C960915617769D860073D5A1 /* EFITE2_ibook-page63.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page63.pdf"; sourceTree = "<group>"; };
+		C960915717769D860073D5A1 /* EFITE2_ibook-page64.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page64.pdf"; sourceTree = "<group>"; };
+		C960915817769D860073D5A1 /* EFITE2_ibook-page65.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page65.pdf"; sourceTree = "<group>"; };
+		C960915917769D860073D5A1 /* EFITE2_ibook-page66.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page66.pdf"; sourceTree = "<group>"; };
+		C960915A17769D860073D5A1 /* EFITE2_ibook-page67.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page67.pdf"; sourceTree = "<group>"; };
+		C960915B17769D860073D5A1 /* EFITE2_ibook-page68.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page68.pdf"; sourceTree = "<group>"; };
+		C960915C17769D860073D5A1 /* EFITE2_ibook-page69.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page69.pdf"; sourceTree = "<group>"; };
+		C960915D17769D860073D5A1 /* EFITE2_ibook-page70.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page70.pdf"; sourceTree = "<group>"; };
+		C960915E17769D860073D5A1 /* EFITE2_ibook-page71.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page71.pdf"; sourceTree = "<group>"; };
+		C960915F17769D860073D5A1 /* EFITE2_ibook-page72.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page72.pdf"; sourceTree = "<group>"; };
+		C960916017769D860073D5A1 /* EFITE2_ibook-page73.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page73.pdf"; sourceTree = "<group>"; };
+		C960916117769D860073D5A1 /* EFITE2_ibook-page74.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page74.pdf"; sourceTree = "<group>"; };
+		C960916217769D860073D5A1 /* EFITE2_ibook-page75.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page75.pdf"; sourceTree = "<group>"; };
+		C960916317769D860073D5A1 /* EFITE2_ibook-page76.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page76.pdf"; sourceTree = "<group>"; };
+		C960916417769D860073D5A1 /* EFITE2_ibook-page77.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page77.pdf"; sourceTree = "<group>"; };
+		C960916517769D860073D5A1 /* EFITE2_ibook-page78.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page78.pdf"; sourceTree = "<group>"; };
+		C96B297D1F8ABCFD0067C15A /* EfiteSpeechTestViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EfiteSpeechTestViewController_iPhone.xib; sourceTree = "<group>"; };
+		C96B297F1F8ABD900067C15A /* EfiteSpeechTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EfiteSpeechTestViewController.h; sourceTree = "<group>"; };
+		C96B29801F8ABDB30067C15A /* EfiteSpeechTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfiteSpeechTestViewController.m; sourceTree = "<group>"; };
+		C96B29821F8ABF400067C15A /* EfiteSpeechTest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EfiteSpeechTest.plist; sourceTree = "<group>"; };
+		C97094371FDE650600B875DD /* Default-Landscape-812h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-812h@3x.png"; sourceTree = "<group>"; };
+		C97094391FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-iPhone6Plus.png"; sourceTree = "<group>"; };
+		C9A2B93715686FFB00BBA72C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		C9A2B93F1568765900BBA72C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		C9EA1DA61E7E415100B82449 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9EA1DA81E7E477E00B82449 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = SOURCE_ROOT; };
+		C9EA1DAC1E7E47B300B82449 /* Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152.png"; sourceTree = SOURCE_ROOT; };
+		C9EA1DAE1E7E4BD300B82449 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = SOURCE_ROOT; };
+		C9F36D3F1751A5B800A481E8 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		C9F36D411751B29900A481E8 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x.png"; sourceTree = "<group>"; };
+		C9F36D431751B47400A481E8 /* Default-Landscape-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-568h@2x.png"; sourceTree = "<group>"; };
+		C9F6AD2F177BEF8700B3908A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C917AB0D1564C7AB007C3ACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9259BBB1F8C92F900194C2A /* AVFoundation.framework in Frameworks */,
+				C9259BB51F8C859700194C2A /* Speech.framework in Frameworks */,
+				C917AB151564C7AB007C3ACE /* UIKit.framework in Frameworks */,
+				C917AB171564C7AB007C3ACE /* Foundation.framework in Frameworks */,
+				C917AB191564C7AB007C3ACE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C917AB051564C7AB007C3ACE = {
+			isa = PBXGroup;
+			children = (
+				C97094391FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png */,
+				C97094371FDE650600B875DD /* Default-Landscape-812h@3x.png */,
+				C90CC7DD1F91BBFF006A0BEB /* Default-568h@2x.png */,
+				C9F36D431751B47400A481E8 /* Default-Landscape-568h@2x.png */,
+				C9F36D411751B29900A481E8 /* Default-Landscape@2x.png */,
+				C9F36D3F1751A5B800A481E8 /* Default-Landscape.png */,
+				C9A2B93F1568765900BBA72C /* Default-Landscape~ipad.png */,
+				C917AB1A1564C7AB007C3ACE /* EfiteBook */,
+				C917AB131564C7AB007C3ACE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C917AB111564C7AB007C3ACE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C917AB101564C7AB007C3ACE /* EfiteBook.app */,
+			);
+			name = Products;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C917AB131564C7AB007C3ACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9259BBA1F8C92F800194C2A /* AVFoundation.framework */,
+				C9259BB81F8C92E600194C2A /* AudioToolbox.framework */,
+				C9259BB61F8C92D300194C2A /* AVKit.framework */,
+				C9259BB41F8C859700194C2A /* Speech.framework */,
+				C917AB141564C7AB007C3ACE /* UIKit.framework */,
+				C917AB161564C7AB007C3ACE /* Foundation.framework */,
+				C917AB181564C7AB007C3ACE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C917AB1A1564C7AB007C3ACE /* EfiteBook */ = {
+			isa = PBXGroup;
+			children = (
+				C917AB231564C7AC007C3ACE /* EfiteAppDelegate.h */,
+				C917AB241564C7AC007C3ACE /* EfiteAppDelegate.m */,
+				C917AB261564C7AC007C3ACE /* EfiteMainViewController.h */,
+				C917AB271564C7AC007C3ACE /* EfiteMainViewController.m */,
+				C917AB291564C7AC007C3ACE /* EfiteFlipsideViewController.h */,
+				C917AB2A1564C7AC007C3ACE /* EfiteFlipsideViewController.m */,
+				C917AB2C1564C7AC007C3ACE /* EfiteMainViewController_iPhone.xib */,
+				C917AB2F1564C7AC007C3ACE /* EfiteMainViewController_iPad.xib */,
+				C917AB321564C7AC007C3ACE /* EfiteFlipsideViewController.xib */,
+				C9EA1DA61E7E415100B82449 /* Images.xcassets */,
+				C917AB1B1564C7AB007C3ACE /* Supporting Files */,
+				C96B297D1F8ABCFD0067C15A /* EfiteSpeechTestViewController_iPhone.xib */,
+				C96B297F1F8ABD900067C15A /* EfiteSpeechTestViewController.h */,
+				C96B29801F8ABDB30067C15A /* EfiteSpeechTestViewController.m */,
+				C90CC7DB1F90602C006A0BEB /* EfiteSpeechTestViewController_iPad.xib */,
+			);
+			path = EfiteBook;
+			sourceTree = "<group>";
+		};
+		C917AB1B1564C7AB007C3ACE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C90CC7DF1F928A17006A0BEB /* Icon-1024.png */,
+				C9EA1DAE1E7E4BD300B82449 /* Icon-120.png */,
+				C9EA1DAC1E7E47B300B82449 /* Icon-152.png */,
+				C9EA1DA81E7E477E00B82449 /* Icon-76.png */,
+				C9F6AD2F177BEF8700B3908A /* Localizable.strings */,
+				C917AB111564C7AB007C3ACE /* Products */,
+				C971645017529E0B003620F8 /* EFITE2PDF2 */,
+				C9A2B93715686FFB00BBA72C /* Icon-72@2x.png */,
+				C917ABDC15662126007C3ACE /* Icon-72.png */,
+				C917ABDA1566211B007C3ACE /* Icon-512.png */,
+				C917ABD815662111007C3ACE /* Icon.png */,
+				C917ABD615662103007C3ACE /* Icon@2x.png */,
+				C917ABD21564DCBA007C3ACE /* EfiteToc.plist */,
+				C917AB1C1564C7AB007C3ACE /* EfiteBook-Info.plist */,
+				C917AB1D1564C7AB007C3ACE /* InfoPlist.strings */,
+				C917AB201564C7AB007C3ACE /* main.m */,
+				C917AB221564C7AB007C3ACE /* EfiteBook-Prefix.pch */,
+				C96B29821F8ABF400067C15A /* EfiteSpeechTest.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C971645017529E0B003620F8 /* EFITE2PDF2 */ = {
+			isa = PBXGroup;
+			children = (
+				C960911817769D860073D5A1 /* EFITE2_ibook-page1.pdf */,
+				C960911917769D860073D5A1 /* EFITE2_ibook-page2.pdf */,
+				C960911A17769D860073D5A1 /* EFITE2_ibook-page3.pdf */,
+				C960911B17769D860073D5A1 /* EFITE2_ibook-page4.pdf */,
+				C960911C17769D860073D5A1 /* EFITE2_ibook-page5.pdf */,
+				C960911D17769D860073D5A1 /* EFITE2_ibook-page6.pdf */,
+				C960911E17769D860073D5A1 /* EFITE2_ibook-page7.pdf */,
+				C960911F17769D860073D5A1 /* EFITE2_ibook-page8.pdf */,
+				C960912017769D860073D5A1 /* EFITE2_ibook-page9.pdf */,
+				C960912117769D860073D5A1 /* EFITE2_ibook-page10.pdf */,
+				C960912217769D860073D5A1 /* EFITE2_ibook-page11.pdf */,
+				C960912317769D860073D5A1 /* EFITE2_ibook-page12.pdf */,
+				C960912417769D860073D5A1 /* EFITE2_ibook-page13.pdf */,
+				C960912517769D860073D5A1 /* EFITE2_ibook-page14.pdf */,
+				C960912617769D860073D5A1 /* EFITE2_ibook-page15.pdf */,
+				C960912717769D860073D5A1 /* EFITE2_ibook-page16.pdf */,
+				C960912817769D860073D5A1 /* EFITE2_ibook-page17.pdf */,
+				C960912917769D860073D5A1 /* EFITE2_ibook-page18.pdf */,
+				C960912A17769D860073D5A1 /* EFITE2_ibook-page19.pdf */,
+				C960912B17769D860073D5A1 /* EFITE2_ibook-page20.pdf */,
+				C960912C17769D860073D5A1 /* EFITE2_ibook-page21.pdf */,
+				C960912D17769D860073D5A1 /* EFITE2_ibook-page22.pdf */,
+				C960912E17769D860073D5A1 /* EFITE2_ibook-page23.pdf */,
+				C960912F17769D860073D5A1 /* EFITE2_ibook-page24.pdf */,
+				C960913017769D860073D5A1 /* EFITE2_ibook-page25.pdf */,
+				C960913117769D860073D5A1 /* EFITE2_ibook-page26.pdf */,
+				C960913217769D860073D5A1 /* EFITE2_ibook-page27.pdf */,
+				C960913317769D860073D5A1 /* EFITE2_ibook-page28.pdf */,
+				C960913417769D860073D5A1 /* EFITE2_ibook-page29.pdf */,
+				C960913517769D860073D5A1 /* EFITE2_ibook-page30.pdf */,
+				C960913617769D860073D5A1 /* EFITE2_ibook-page31.pdf */,
+				C960913717769D860073D5A1 /* EFITE2_ibook-page32.pdf */,
+				C960913817769D860073D5A1 /* EFITE2_ibook-page33.pdf */,
+				C960913917769D860073D5A1 /* EFITE2_ibook-page34.pdf */,
+				C960913A17769D860073D5A1 /* EFITE2_ibook-page35.pdf */,
+				C960913B17769D860073D5A1 /* EFITE2_ibook-page36.pdf */,
+				C960913C17769D860073D5A1 /* EFITE2_ibook-page37.pdf */,
+				C960913D17769D860073D5A1 /* EFITE2_ibook-page38.pdf */,
+				C960913E17769D860073D5A1 /* EFITE2_ibook-page39.pdf */,
+				C960913F17769D860073D5A1 /* EFITE2_ibook-page40.pdf */,
+				C960914017769D860073D5A1 /* EFITE2_ibook-page41.pdf */,
+				C960914117769D860073D5A1 /* EFITE2_ibook-page42.pdf */,
+				C960914217769D860073D5A1 /* EFITE2_ibook-page43.pdf */,
+				C960914317769D860073D5A1 /* EFITE2_ibook-page44.pdf */,
+				C960914417769D860073D5A1 /* EFITE2_ibook-page45.pdf */,
+				C960914517769D860073D5A1 /* EFITE2_ibook-page46.pdf */,
+				C960914617769D860073D5A1 /* EFITE2_ibook-page47.pdf */,
+				C960914717769D860073D5A1 /* EFITE2_ibook-page48.pdf */,
+				C960914817769D860073D5A1 /* EFITE2_ibook-page49.pdf */,
+				C960914917769D860073D5A1 /* EFITE2_ibook-page50.pdf */,
+				C960914A17769D860073D5A1 /* EFITE2_ibook-page51.pdf */,
+				C960914B17769D860073D5A1 /* EFITE2_ibook-page52.pdf */,
+				C960914C17769D860073D5A1 /* EFITE2_ibook-page53.pdf */,
+				C960914D17769D860073D5A1 /* EFITE2_ibook-page54.pdf */,
+				C960914E17769D860073D5A1 /* EFITE2_ibook-page55.pdf */,
+				C960914F17769D860073D5A1 /* EFITE2_ibook-page56.pdf */,
+				C960915017769D860073D5A1 /* EFITE2_ibook-page57.pdf */,
+				C960915117769D860073D5A1 /* EFITE2_ibook-page58.pdf */,
+				C960915217769D860073D5A1 /* EFITE2_ibook-page59.pdf */,
+				C960915317769D860073D5A1 /* EFITE2_ibook-page60.pdf */,
+				C960915417769D860073D5A1 /* EFITE2_ibook-page61.pdf */,
+				C960915517769D860073D5A1 /* EFITE2_ibook-page62.pdf */,
+				C960915617769D860073D5A1 /* EFITE2_ibook-page63.pdf */,
+				C960915717769D860073D5A1 /* EFITE2_ibook-page64.pdf */,
+				C960915817769D860073D5A1 /* EFITE2_ibook-page65.pdf */,
+				C960915917769D860073D5A1 /* EFITE2_ibook-page66.pdf */,
+				C960915A17769D860073D5A1 /* EFITE2_ibook-page67.pdf */,
+				C960915B17769D860073D5A1 /* EFITE2_ibook-page68.pdf */,
+				C960915C17769D860073D5A1 /* EFITE2_ibook-page69.pdf */,
+				C960915D17769D860073D5A1 /* EFITE2_ibook-page70.pdf */,
+				C960915E17769D860073D5A1 /* EFITE2_ibook-page71.pdf */,
+				C960915F17769D860073D5A1 /* EFITE2_ibook-page72.pdf */,
+				C960916017769D860073D5A1 /* EFITE2_ibook-page73.pdf */,
+				C960916117769D860073D5A1 /* EFITE2_ibook-page74.pdf */,
+				C960916217769D860073D5A1 /* EFITE2_ibook-page75.pdf */,
+				C960916317769D860073D5A1 /* EFITE2_ibook-page76.pdf */,
+				C960916417769D860073D5A1 /* EFITE2_ibook-page77.pdf */,
+				C960916517769D860073D5A1 /* EFITE2_ibook-page78.pdf */,
+			);
+			path = EFITE2PDF2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C917AB0F1564C7AB007C3ACE /* EfiteBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C917AB371564C7AC007C3ACE /* Build configuration list for PBXNativeTarget "EfiteBook" */;
+			buildPhases = (
+				C917AB0C1564C7AB007C3ACE /* Sources */,
+				C917AB0D1564C7AB007C3ACE /* Frameworks */,
+				C917AB0E1564C7AB007C3ACE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EfiteBook;
+			productName = EfiteBook;
+			productReference = C917AB101564C7AB007C3ACE /* EfiteBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C917AB071564C7AB007C3ACE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Efite;
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					C917AB0F1564C7AB007C3ACE = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C917AB0A1564C7AB007C3ACE /* Build configuration list for PBXProject "EfiteBook" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C917AB051564C7AB007C3ACE;
+			productRefGroup = C917AB111564C7AB007C3ACE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C917AB0F1564C7AB007C3ACE /* EfiteBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C917AB0E1564C7AB007C3ACE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C917AB1F1564C7AB007C3ACE /* InfoPlist.strings in Resources */,
+				C917AB2E1564C7AC007C3ACE /* EfiteMainViewController_iPhone.xib in Resources */,
+				C917AB311564C7AC007C3ACE /* EfiteMainViewController_iPad.xib in Resources */,
+				C917AB341564C7AC007C3ACE /* EfiteFlipsideViewController.xib in Resources */,
+				C917ABD31564DCBA007C3ACE /* EfiteToc.plist in Resources */,
+				C917ABD715662104007C3ACE /* Icon@2x.png in Resources */,
+				C917ABD915662111007C3ACE /* Icon.png in Resources */,
+				C917ABDB1566211B007C3ACE /* Icon-512.png in Resources */,
+				C917ABDD15662126007C3ACE /* Icon-72.png in Resources */,
+				C9A2B93815686FFB00BBA72C /* Icon-72@2x.png in Resources */,
+				C9A2B9401568765900BBA72C /* Default-Landscape~ipad.png in Resources */,
+				C9F36D401751A5B800A481E8 /* Default-Landscape.png in Resources */,
+				C97094381FDE650700B875DD /* Default-Landscape-812h@3x.png in Resources */,
+				C9F36D421751B29900A481E8 /* Default-Landscape@2x.png in Resources */,
+				C9F36D441751B47400A481E8 /* Default-Landscape-568h@2x.png in Resources */,
+				C960916617769D860073D5A1 /* EFITE2_ibook-page1.pdf in Resources */,
+				C960916717769D860073D5A1 /* EFITE2_ibook-page2.pdf in Resources */,
+				C960916817769D860073D5A1 /* EFITE2_ibook-page3.pdf in Resources */,
+				C960916917769D860073D5A1 /* EFITE2_ibook-page4.pdf in Resources */,
+				C960916A17769D860073D5A1 /* EFITE2_ibook-page5.pdf in Resources */,
+				C960916B17769D860073D5A1 /* EFITE2_ibook-page6.pdf in Resources */,
+				C960916C17769D860073D5A1 /* EFITE2_ibook-page7.pdf in Resources */,
+				C960916D17769D860073D5A1 /* EFITE2_ibook-page8.pdf in Resources */,
+				C960916E17769D860073D5A1 /* EFITE2_ibook-page9.pdf in Resources */,
+				C960916F17769D860073D5A1 /* EFITE2_ibook-page10.pdf in Resources */,
+				C960917017769D860073D5A1 /* EFITE2_ibook-page11.pdf in Resources */,
+				C960917117769D860073D5A1 /* EFITE2_ibook-page12.pdf in Resources */,
+				C960917217769D860073D5A1 /* EFITE2_ibook-page13.pdf in Resources */,
+				C960917317769D860073D5A1 /* EFITE2_ibook-page14.pdf in Resources */,
+				C90CC7DE1F91BBFF006A0BEB /* Default-568h@2x.png in Resources */,
+				C960917417769D860073D5A1 /* EFITE2_ibook-page15.pdf in Resources */,
+				C960917517769D860073D5A1 /* EFITE2_ibook-page16.pdf in Resources */,
+				C960917617769D860073D5A1 /* EFITE2_ibook-page17.pdf in Resources */,
+				C960917717769D860073D5A1 /* EFITE2_ibook-page18.pdf in Resources */,
+				C9EA1DAD1E7E47B300B82449 /* Icon-152.png in Resources */,
+				C960917817769D860073D5A1 /* EFITE2_ibook-page19.pdf in Resources */,
+				C960917917769D860073D5A1 /* EFITE2_ibook-page20.pdf in Resources */,
+				C960917A17769D860073D5A1 /* EFITE2_ibook-page21.pdf in Resources */,
+				C960917B17769D860073D5A1 /* EFITE2_ibook-page22.pdf in Resources */,
+				C960917C17769D860073D5A1 /* EFITE2_ibook-page23.pdf in Resources */,
+				C960917D17769D860073D5A1 /* EFITE2_ibook-page24.pdf in Resources */,
+				C960917E17769D860073D5A1 /* EFITE2_ibook-page25.pdf in Resources */,
+				C960917F17769D860073D5A1 /* EFITE2_ibook-page26.pdf in Resources */,
+				C960918017769D860073D5A1 /* EFITE2_ibook-page27.pdf in Resources */,
+				C960918117769D860073D5A1 /* EFITE2_ibook-page28.pdf in Resources */,
+				C960918217769D860073D5A1 /* EFITE2_ibook-page29.pdf in Resources */,
+				C960918317769D860073D5A1 /* EFITE2_ibook-page30.pdf in Resources */,
+				C960918417769D860073D5A1 /* EFITE2_ibook-page31.pdf in Resources */,
+				C960918517769D860073D5A1 /* EFITE2_ibook-page32.pdf in Resources */,
+				C960918617769D860073D5A1 /* EFITE2_ibook-page33.pdf in Resources */,
+				C960918717769D860073D5A1 /* EFITE2_ibook-page34.pdf in Resources */,
+				C960918817769D860073D5A1 /* EFITE2_ibook-page35.pdf in Resources */,
+				C960918917769D860073D5A1 /* EFITE2_ibook-page36.pdf in Resources */,
+				C960918A17769D860073D5A1 /* EFITE2_ibook-page37.pdf in Resources */,
+				C960918B17769D860073D5A1 /* EFITE2_ibook-page38.pdf in Resources */,
+				C960918C17769D860073D5A1 /* EFITE2_ibook-page39.pdf in Resources */,
+				C960918D17769D860073D5A1 /* EFITE2_ibook-page40.pdf in Resources */,
+				C96B297E1F8ABCFD0067C15A /* EfiteSpeechTestViewController_iPhone.xib in Resources */,
+				C960918E17769D860073D5A1 /* EFITE2_ibook-page41.pdf in Resources */,
+				C960918F17769D860073D5A1 /* EFITE2_ibook-page42.pdf in Resources */,
+				C960919017769D860073D5A1 /* EFITE2_ibook-page43.pdf in Resources */,
+				C960919117769D860073D5A1 /* EFITE2_ibook-page44.pdf in Resources */,
+				C960919217769D860073D5A1 /* EFITE2_ibook-page45.pdf in Resources */,
+				C960919317769D860073D5A1 /* EFITE2_ibook-page46.pdf in Resources */,
+				C960919417769D860073D5A1 /* EFITE2_ibook-page47.pdf in Resources */,
+				C960919517769D860073D5A1 /* EFITE2_ibook-page48.pdf in Resources */,
+				C960919617769D860073D5A1 /* EFITE2_ibook-page49.pdf in Resources */,
+				C960919717769D860073D5A1 /* EFITE2_ibook-page50.pdf in Resources */,
+				C960919817769D860073D5A1 /* EFITE2_ibook-page51.pdf in Resources */,
+				C960919917769D860073D5A1 /* EFITE2_ibook-page52.pdf in Resources */,
+				C960919A17769D860073D5A1 /* EFITE2_ibook-page53.pdf in Resources */,
+				C960919B17769D860073D5A1 /* EFITE2_ibook-page54.pdf in Resources */,
+				C960919C17769D860073D5A1 /* EFITE2_ibook-page55.pdf in Resources */,
+				C960919D17769D860073D5A1 /* EFITE2_ibook-page56.pdf in Resources */,
+				C960919E17769D860073D5A1 /* EFITE2_ibook-page57.pdf in Resources */,
+				C960919F17769D860073D5A1 /* EFITE2_ibook-page58.pdf in Resources */,
+				C96091A017769D860073D5A1 /* EFITE2_ibook-page59.pdf in Resources */,
+				C96091A117769D860073D5A1 /* EFITE2_ibook-page60.pdf in Resources */,
+				C96091A217769D860073D5A1 /* EFITE2_ibook-page61.pdf in Resources */,
+				C96091A317769D860073D5A1 /* EFITE2_ibook-page62.pdf in Resources */,
+				C9EA1DA71E7E415200B82449 /* Images.xcassets in Resources */,
+				C96091A417769D860073D5A1 /* EFITE2_ibook-page63.pdf in Resources */,
+				C96091A517769D860073D5A1 /* EFITE2_ibook-page64.pdf in Resources */,
+				C96091A617769D860073D5A1 /* EFITE2_ibook-page65.pdf in Resources */,
+				C96091A717769D860073D5A1 /* EFITE2_ibook-page66.pdf in Resources */,
+				C96091A817769D860073D5A1 /* EFITE2_ibook-page67.pdf in Resources */,
+				C9EA1DAF1E7E4BD300B82449 /* Icon-120.png in Resources */,
+				C96091A917769D860073D5A1 /* EFITE2_ibook-page68.pdf in Resources */,
+				C96091AA17769D860073D5A1 /* EFITE2_ibook-page69.pdf in Resources */,
+				C96B29831F8ABF400067C15A /* EfiteSpeechTest.plist in Resources */,
+				C90CC7E01F928A17006A0BEB /* Icon-1024.png in Resources */,
+				C96091AB17769D860073D5A1 /* EFITE2_ibook-page70.pdf in Resources */,
+				C96091AC17769D860073D5A1 /* EFITE2_ibook-page71.pdf in Resources */,
+				C96091AD17769D860073D5A1 /* EFITE2_ibook-page72.pdf in Resources */,
+				C90CC7DC1F90602C006A0BEB /* EfiteSpeechTestViewController_iPad.xib in Resources */,
+				C96091AE17769D860073D5A1 /* EFITE2_ibook-page73.pdf in Resources */,
+				C96091AF17769D860073D5A1 /* EFITE2_ibook-page74.pdf in Resources */,
+				C970943A1FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png in Resources */,
+				C96091B017769D860073D5A1 /* EFITE2_ibook-page75.pdf in Resources */,
+				C96091B117769D860073D5A1 /* EFITE2_ibook-page76.pdf in Resources */,
+				C96091B217769D860073D5A1 /* EFITE2_ibook-page77.pdf in Resources */,
+				C9EA1DA91E7E477E00B82449 /* Icon-76.png in Resources */,
+				C96091B317769D860073D5A1 /* EFITE2_ibook-page78.pdf in Resources */,
+				C9F6AD30177BEF8700B3908A /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C917AB0C1564C7AB007C3ACE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C917AB211564C7AB007C3ACE /* main.m in Sources */,
+				C917AB251564C7AC007C3ACE /* EfiteAppDelegate.m in Sources */,
+				C917AB281564C7AC007C3ACE /* EfiteMainViewController.m in Sources */,
+				C917AB2B1564C7AC007C3ACE /* EfiteFlipsideViewController.m in Sources */,
+				C96B29811F8ABDB30067C15A /* EfiteSpeechTestViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C917AB1D1564C7AB007C3ACE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C917AB1E1564C7AB007C3ACE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C917AB2C1564C7AC007C3ACE /* EfiteMainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C917AB2D1564C7AC007C3ACE /* en */,
+			);
+			name = EfiteMainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		C917AB2F1564C7AC007C3ACE /* EfiteMainViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C917AB301564C7AC007C3ACE /* en */,
+			);
+			name = EfiteMainViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		C917AB321564C7AC007C3ACE /* EfiteFlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C917AB331564C7AC007C3ACE /* en */,
+			);
+			name = EfiteFlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C917AB351564C7AC007C3ACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Masayoshi Habu (98Z4F8JU6G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Masayoshi Habu (98Z4F8JU6G)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "82a2b6a4-7e37-44d0-b87e-b600638a9cc8";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C917AB361564C7AC007C3ACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "82a2b6a4-7e37-44d0-b87e-b600638a9cc8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C917AB381564C7AC007C3ACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WS4Q396ELP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EfiteBook/EfiteBook-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "EfiteBook/EfiteBook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haburesearch.${PRODUCT_NAME:rfc1034identifier}2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "710cbc9c-f8b7-4359-80b2-c1aa89f108bf";
+				PROVISIONING_PROFILE_SPECIFIER = HR_Generic_Dev;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C917AB391564C7AC007C3ACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WS4Q396ELP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EfiteBook/EfiteBook-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "EfiteBook/EfiteBook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haburesearch.${PRODUCT_NAME:rfc1034identifier}2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9c6053be-8c30-4d5a-8b9e-2953dc247617";
+				PROVISIONING_PROFILE_SPECIFIER = HR_Generic_Dist;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C917AB0A1564C7AB007C3ACE /* Build configuration list for PBXProject "EfiteBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C917AB351564C7AC007C3ACE /* Debug */,
+				C917AB361564C7AC007C3ACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C917AB371564C7AC007C3ACE /* Build configuration list for PBXNativeTarget "EfiteBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C917AB381564C7AC007C3ACE /* Debug */,
+				C917AB391564C7AC007C3ACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C917AB071564C7AB007C3ACE /* Project object */;
+}

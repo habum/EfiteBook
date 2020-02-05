@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>00</key>
+	<string>IT英語　iOS10以上ならTestボタンで発音テスト</string>
+	<key>01</key>
+	<string>英語で仕事</string>
+	<key>02</key>
+	<string>　IT業界</string>
+	<key>04</key>
+	<string>　英語のレベル</string>
+	<key>06</key>
+	<string>　英語の利点</string>
+	<key>08</key>
+	<string>英語の練習法</string>
+	<key>09</key>
+	<string>　言葉の練習</string>
+	<key>11</key>
+	<string>　視る</string>
+	<key>13</key>
+	<string>　真似する</string>
+	<key>15</key>
+	<string>　聴く</string>
+	<key>17</key>
+	<string>　話す</string>
+	<key>21</key>
+	<string>　読む</string>
+	<key>23</key>
+	<string>　書く</string>
+	<key>26</key>
+	<string>　発音</string>
+	<key>30</key>
+	<string>英語を使う</string>
+	<key>31</key>
+	<string>　挨拶</string>
+	<key>35</key>
+	<string>　発表</string>
+	<key>38</key>
+	<string>　会議</string>
+	<key>42</key>
+	<string>　面接</string>
+	<key>45</key>
+	<string>　電話</string>
+	<key>48</key>
+	<string>　相談</string>
+	<key>51</key>
+	<string>　メール</string>
+	<key>53</key>
+	<string>　世間話</string>
+	<key>55</key>
+	<string>英語表現</string>
+	<key>56</key>
+	<string>　数の表現</string>
+	<key>62</key>
+	<string>　ひとこと集</string>
+	<key>69</key>
+	<string>　略語集</string>
+	<key>72</key>
+	<string>Q&amp;A</string>
+	<key>73</key>
+	<string>　英語で言う</string>
+	<key>75</key>
+	<string>　An Interview</string>
+	<key>77</key>
+	<string>　参考文献</string>
+</dict>
+</plist>
