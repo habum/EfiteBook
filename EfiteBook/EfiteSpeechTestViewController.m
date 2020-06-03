@@ -307,7 +307,8 @@
     }
     [self unload];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // [self dismissViewControllerAnimated:YES completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)start:(id)sender
