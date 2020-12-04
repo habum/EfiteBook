@@ -7,6 +7,7 @@
 //
 
 #import "EfiteMainViewController.h"
+#import "MyWKWebView.h"
 
 @interface EfiteMainViewController ()
 
@@ -25,11 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     tick = 0;
     newsFlag = 0;
     newPage = NO;
-    zoomScale = 1.0f;
-    ios = [[[UIDevice currentDevice] systemVersion] intValue];  // not used now
+    zoomScale = 0.636450f; // was 1.0f;
+    //ios = [[[UIDevice currentDevice] systemVersion] intValue];  // not used now
 	// Do any additional setup after loading the view, typically from a nib.
     // Calling -loadDocument:inView:
     prefix = @"EFITE2_ibook-page";
@@ -42,10 +44,52 @@
     //pageMax = 77;  // book 1.1
     pageMax = 78;  // book 1.2, 1.3
 
-    [(UIWebView*)self.view setScalesPageToFit: true];
+    //[(MyWKWebView*)self.view setScalesPageToFit: true];
     //[self gotoPage:page];  // unnecessary - see restoreData called on active
     previous.x = previous.y = 0.0f;
+    contentOffset.x = contentOffset.y = 0.0f;
 
+    // trigger zooming after page loading completed
+    watchDogTimer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)(1.0 / 10.0)
+                        target:self selector:@selector(wakeUpWatchDog)
+                        userInfo:nil repeats:TRUE];
+    //all the view manipulation is in viewDidLayoutSubviews
+}
+
+#define x_offset 0.04f
+#define y_offset 0.05f
+#define x_shift  0.96f
+#define y_shift  0.93f
+#define x_center 0.50f
+#define y_center 0.50f
+
+-(void)viewDidLayoutSubviews
+{
+    // bring them front
+    // AutoLayout of WKWebView does not work, so layout them here
+    CGSize wvsize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
+    [(MyWKWebView*)self.view addSubview: buttonLeft];
+    buttonLeft.frame = CGRectMake(wvsize.width * x_offset - (buttonLeft.frame.size.width / 2), wvsize.height * y_offset - (buttonLeft.frame.size.height / 2), buttonLeft.frame.size.width, buttonLeft.frame.size.height);
+    [(MyWKWebView*)self.view bringSubviewToFront: buttonLeft];
+    
+    [(MyWKWebView*)self.view addSubview: buttonRight];
+    buttonRight.frame = CGRectMake(wvsize.width * x_shift - (buttonRight.frame.size.width / 2), wvsize.height * y_offset - (buttonRight.frame.size.height / 2), buttonRight.frame.size.width, buttonRight.frame.size.height);
+    [(MyWKWebView*)self.view bringSubviewToFront: buttonRight];
+    
+    [(MyWKWebView*)self.view addSubview: buttonInfo];
+    buttonInfo.frame = CGRectMake(wvsize.width * x_center - (buttonInfo.frame.size.width / 2), wvsize.height * y_offset - (buttonInfo.frame.size.height / 2), buttonInfo.frame.size.width, buttonInfo.frame.size.height);
+    [(MyWKWebView*)self.view bringSubviewToFront: buttonInfo];
+    
+    [(MyWKWebView*)self.view addSubview: buttonSpeechTest];
+    buttonSpeechTest.frame = CGRectMake(wvsize.width * x_center - (buttonSpeechTest.frame.size.width / 2), wvsize.height * y_shift - (buttonSpeechTest.frame.size.height / 2), buttonSpeechTest.frame.size.width, buttonSpeechTest.frame.size.height);
+    [(MyWKWebView*)self.view bringSubviewToFront: buttonSpeechTest];
+    
+    [(MyWKWebView*)self.view addSubview: activity];
+    activity.frame = CGRectMake(wvsize.width * x_center - (activity.frame.size.width / 2), wvsize.height * y_center - (activity.frame.size.height / 2), activity.frame.size.width, activity.frame.size.height);
+    [(MyWKWebView*)self.view bringSubviewToFront: activity];
+    
+    
+    // gesture recognizer
     UISwipeGestureRecognizer* swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(goBack:)];
     // iOS 3.2 or later supports this gesture
     if (![swipeRight respondsToSelector:@selector(locationInView:)]) {
@@ -53,7 +97,7 @@
         swipeRight = nil;
     } else if (swipeRight) {
         swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-        [(UIWebView*)self.view addGestureRecognizer:swipeRight];
+        [(MyWKWebView*)self.view addGestureRecognizer:swipeRight];
     }
     
     UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(goForward:)];
@@ -63,58 +107,18 @@
         swipeLeft = nil;
     } else if (swipeLeft) {
         swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-        [(UIWebView*)self.view addGestureRecognizer:swipeLeft];
+        [(MyWKWebView*)self.view addGestureRecognizer:swipeLeft];
     }
     
-    UITapGestureRecognizer * tap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goSpeech:)];
-    // iOS 3.2 or later supports this gesture
-    if (![tap2 respondsToSelector:@selector(locationInView:)]) {
-        [tap2 release];
-        tap2 = nil;
-    } else if (tap2) {
-        tap2.numberOfTouchesRequired = 2;
-        [(UIWebView*)self.view addGestureRecognizer:tap2];
-    }
-    
-    // bring them front
-    [(UIWebView*)self.view bringSubviewToFront: buttonLeft];
-    [(UIWebView*)self.view bringSubviewToFront: buttonRight];
-    [(UIWebView*)self.view bringSubviewToFront: buttonInfo];
-    [(UIWebView*)self.view bringSubviewToFront: buttonSpeechTest];
-    [(UIWebView*)self.view bringSubviewToFront: activity];
-    
-    // receive loading status for activity
-    [(UIWebView*)self.view setDelegate:self];
+    // receive loading status through delegate
+    [(MyWKWebView*)self.view setNavigationDelegate:self];
+    [(MyWKWebView*)self.view setUIDelegate:self];
     
     // iOS 5.0 or later supports this
-    if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-        [[(UIWebView*)self.view scrollView] setDelegate:self];
+    if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+        [[(MyWKWebView*)self.view scrollView] setDelegate:self];
     }
-    
-    // trigger zooming after page loading completed
-    watchDogTimer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)(1.0 / 10.0)
-                        target:self selector:@selector(wakeUpWatchDog)
-                        userInfo:nil repeats:TRUE];
-    
 }
-
-//- (void)viewDidUnload
-//{
-//    self.buttonRight = nil;
-//    self.buttonLeft = nil;
-//    self.buttonInfo = nil;
-//    self.activity = nil;
-//    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-//}
-
-// landscape only
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-//{
-//    return (interfaceOrientation == UIDeviceOrientationLandscapeLeft ||
-//            interfaceOrientation == UIDeviceOrientationLandscapeRight);
-//
-//}
 
 // called from both page selection menu, buttons, and swipes
 -(void)gotoPage:(int)p
@@ -131,33 +135,41 @@
 -(void)loadDocument:(NSString*)documentName
 {
     // iOS 5.0 or later supports this
-    if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-        zoomScale = [[(UIWebView*)self.view scrollView] zoomScale];
+    if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+        float _zoomScale = [[(MyWKWebView*)self.view scrollView] zoomScale];
+        NSLog(@"zoomScale %f", _zoomScale);
+        // 1.000000 indicates an initial zoom
+        if (_zoomScale != 1.000000) {
+            zoomScale = _zoomScale;
+        }
     }
     
     NSString *path = [[NSBundle mainBundle] pathForResource:documentName ofType:nil];
     NSURL *url = [NSURL fileURLWithPath:path];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLRequest *original = ((UIWebView*)self.view).request;
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //NSURLRequest *original = [((MyWKWebView*)self.view) request];
+    NSURL *originalURL = [((MyWKWebView*)self.view) URL];
     // load a new page only (avoid zoom reset on active)
-    if (original) {
-        NSURL *originalURL = [original URL];
+    if (originalURL) {
+        //NSURL *originalURL = [original URL];
         NSString *originalPath = [originalURL path];
         if (![originalPath isEqualToString:path]) {
             // iOS 5.0 or later supports this
-            if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-                [[(UIWebView*)self.view scrollView] setHidden:YES];
+            if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+                [[(MyWKWebView*)self.view scrollView] setHidden:YES];
             }
-            [(UIWebView*)self.view loadRequest:request];
+            //[(MyWKWebView*)self.view loadRequest:request];
+            [(MyWKWebView*)self.view loadFileURL:url allowingReadAccessToURL:url];
             newPage = YES;
             tick = TICK;
         }
     } else {
         // iOS 5.0 or later supports this
-        if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-            [[(UIWebView*)self.view scrollView] setHidden:YES];
+        if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+            [[(MyWKWebView*)self.view scrollView] setHidden:YES];
         }
-        [(UIWebView*)self.view loadRequest:request];
+        //[(MyWKWebView*)self.view loadRequest:request];
+        [(MyWKWebView*)self.view loadFileURL:url allowingReadAccessToURL:url];
         newPage = YES;
         tick = TICK;
     }
@@ -166,25 +178,26 @@
 #define IPADPADDING 4.0f
 -(void)goBackPage
 {
-    NSURLRequest *current = [(UIWebView*)self.view request];
-    NSURL *url = [current URL];
+    //NSURLRequest *current = [(MyWKWebView*)self.view request];
+    //NSURL *url = [current URL];
+    NSURL *url = [(MyWKWebView*)self.view URL];
     if ([url isFileURL]) {
         if (pageMin < page) {
             page--;
             [self gotoPage:page];
         }
     } else {
-        if ([(UIWebView*)self.view canGoBack]) {
-            [(UIWebView*)self.view goBack];
+        if ([(MyWKWebView*)self.view canGoBack]) {
+            [(MyWKWebView*)self.view goBack];
         }
     }
     contentOffset.x = contentOffset.y = 0.0f;
     
     // iOS 5.0 or later supports this
     // set to the bottom-right corner
-    if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-        CGRect bounds = [[(UIWebView*)self.view scrollView] bounds];
-        CGSize csize = [[(UIWebView*)self.view scrollView] contentSize];
+    if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+        CGRect bounds = [[(MyWKWebView*)self.view scrollView] bounds];
+        CGSize csize = [[(MyWKWebView*)self.view scrollView] contentSize];
         contentOffset.x = csize.width - bounds.size.width;
         
         // iPad can show the entire page, so a vertical shift needs to be excluded
@@ -213,16 +226,17 @@
 
 -(void)goForwardPage
 {
-    NSURLRequest *current = [(UIWebView*)self.view request];
-    NSURL *url = [current URL];
+    //NSURLRequest *current = [(MyWKWebView*)self.view request];
+    //NSURL *url = [current URL];
+    NSURL *url = [(MyWKWebView*)self.view URL];
     if ([url isFileURL]) {
         if (page < pageMax) {
             page++;
             [self gotoPage:page];
         }
     } else {
-        if ([(UIWebView*)self.view canGoForward]) {
-            [(UIWebView*)self.view goForward];
+        if ([(MyWKWebView*)self.view canGoForward]) {
+            [(MyWKWebView*)self.view goForward];
         }
     }
     // reset to the top-left corner
@@ -268,15 +282,13 @@
     [buttonInfo release];
     [buttonSpeechTest release];
     [activity release];
-    [(UIWebView*)self.view setDelegate:nil];
+    [(MyWKWebView*)self.view setNavigationDelegate:nil];
+    [(MyWKWebView*)self.view setUIDelegate:nil];
+
     [watchDogTimer invalidate];
 	[watchDogTimer release];
     [super dealloc];
 }
-
-//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-//{
-//}
 
 - (IBAction)speechTest:(id)sender
 {
@@ -285,10 +297,12 @@
     if (isOSVersion10orLater) {
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             EfiteSpeechTestViewController *controller = [[[EfiteSpeechTestViewController alloc] initWithNibName:@"EfiteSpeechTestViewController_iPhone" bundle:nil] autorelease];
+            controller.modalPresentationStyle = UIModalPresentationFullScreen; // iOS13+
             controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
             [self presentViewController:controller animated:YES completion:nil];
         } else {
             EfiteSpeechTestViewController *controller = [[[EfiteSpeechTestViewController alloc] initWithNibName:@"EfiteSpeechTestViewController_iPad" bundle:nil] autorelease];
+            controller.modalPresentationStyle = UIModalPresentationFullScreen; // iOS13+
             controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
             [self presentViewController:controller animated:YES completion:nil];
         }
@@ -309,24 +323,32 @@
 {
     EfiteFlipsideViewController *controller = [[[EfiteFlipsideViewController alloc] initWithNibName:@"EfiteFlipsideViewController" bundle:nil] autorelease];
     controller.delegate = self;
+    controller.modalPresentationStyle = UIModalPresentationFullScreen; // iOS13+
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    //controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:controller animated:YES completion:nil];
+    //[self showDetailViewController:controller sender:self];
     [controller selectPage: page]; // show the current page selection
 }
 
--(void)webViewDidStartLoad:(UIWebView *)webView
+//WKNavigationDelegate
+- (void)webView:(WKWebView *)webView
+    didCommitNavigation:(WKNavigation *)navigation
 {
     [activity startAnimating];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView
+//WKNavigationDelegate
+- (void)webView:(WKWebView *)webView
+    didFinishNavigation:(WKNavigation *)navigation
 {
     [activity stopAnimating];
     
     // hide nav buttons on iPhone/iPod when showing an Internet page for page controls
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        NSURLRequest *current = [(UIWebView*)self.view request];
-        NSURL *url = [current URL];
+        //NSURLRequest *current = [(MyWKWebView*)self.view request];
+        //NSURL *url = [current URL];
+        NSURL *url = [(MyWKWebView*)self.view URL];
         if ([url isFileURL]) {
             [buttonRight setHidden:NO];
             [buttonLeft setHidden:NO];
@@ -337,8 +359,11 @@
     }
 }
 
+//WKNavigationDelegate
 // this dialog is added for version 1.3, changed to UIAlertController for 1.4.
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+- (void)webView:(WKWebView *)webView
+    didFailNavigation:(WKNavigation *)navigation
+    withError:(NSError *)error
 {
     NSInteger code = [error code];
     if (code == NSURLErrorNotConnectedToInternet) {
@@ -358,15 +383,15 @@
 // hack to adjust zooming because content loading and rendering are asynchronous
 -(void)wakeUpWatchDog
 {
-    if (newPage && ![(UIWebView*)self.view isLoading]) {
+    if (newPage && ![(MyWKWebView*)self.view isLoading]) {
         if (0 < tick) {
             tick--;  // wait for rendering is done after loading is done
         } else {
             // iOS 5.0 or later supports this
-            if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-                [[(UIWebView*)self.view scrollView] setZoomScale:zoomScale animated:NO];
-                [[(UIWebView*)self.view scrollView] setContentOffset:contentOffset animated:NO];
-                [[(UIWebView*)self.view scrollView] setHidden:NO];
+            if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+                [[(MyWKWebView*)self.view scrollView] setZoomScale:zoomScale animated:NO];
+                [[(MyWKWebView*)self.view scrollView] setContentOffset:contentOffset animated:NO];
+                [[(MyWKWebView*)self.view scrollView] setHidden:NO];
             }
             newPage = NO;
         }
@@ -375,15 +400,15 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)sview
 {
-    if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-        previous = [[(UIWebView*)self.view scrollView] contentOffset];
+    if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+        previous = [[(MyWKWebView*)self.view scrollView] contentOffset];
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)sview willDecelerate:(BOOL)decelerate
 {
-    if ([(UIWebView*)self.view respondsToSelector:@selector(scrollView)]) {
-        CGPoint offset = [[(UIWebView*)self.view scrollView] contentOffset];
+    if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+        CGPoint offset = [[(MyWKWebView*)self.view scrollView] contentOffset];
         CGFloat xdiff = offset.x - previous.x;
         CGFloat ydiff = offset.y - previous.y;
         CGFloat margin = 6.0f;  // empirical value
@@ -415,6 +440,7 @@
 }
 
 - (void)saveData {
+    NSLog(@"saveData");
 	NSMutableDictionary* dic = [[NSMutableDictionary alloc] init];
 	
 	NSNumber* pageObj = [NSNumber numberWithInt:page];
@@ -426,9 +452,19 @@
     
 	[dic writeToFile:[self dataFilePath] atomically:YES];
 	[dic release];
+    
+    // iOS 5.0 or later supports this
+    if ([(MyWKWebView*)self.view respondsToSelector:@selector(scrollView)]) {
+        zoomScale = [[(MyWKWebView*)self.view scrollView] zoomScale];
+        NSLog(@"zoomScale %f", zoomScale);
+    }
 }
 
 - (void)restoreData {
+    NSLog(@"restoreData");
+    // hack to get a good view with WKWebView
+    [self loadView];
+    
 	NSString* filePath = [self dataFilePath];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		NSDictionary* dic = [[NSDictionary alloc] initWithContentsOfFile:filePath];
@@ -454,13 +490,13 @@
                     // correct page number - do nothing
                 }
             }
-            
             [self gotoPage: p];  // load the page
         } else {
             [self gotoPage: page];  // load the same page if current page is unknown
         }
         
         if (newsObj == nil) {
+            /*
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"新機能：発音練習付き"
                                                                            message:@"２本指タップで開始　iOS10以上"
                                                                     preferredStyle:UIAlertControllerStyleAlert];
@@ -470,6 +506,7 @@
             
             [alert addAction:defaultAction];
             [self presentViewController:alert animated:YES completion:nil];
+             */
             newsFlag = 1;
         }
 		

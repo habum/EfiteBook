@@ -38,6 +38,7 @@
 {
     [super viewDidLoad];
     NSLog(@"EfiteSpeechTestViewController viewDidLoad");
+    //self.modalPresentationStyle = UIModalPresentationFullScreen;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"EfiteSpeechTest" ofType:@"plist"];
     // key = text number string dd, value = text to show
@@ -103,6 +104,9 @@
     currentTask = nil;
     speechTimer = nil;
     inputNode = nil;
+    
+    NSOperatingSystemVersion version = {13, 0, 0};
+    isOSVersion13orLater = [[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:version];
 }
 
 -(void)startSpeech
@@ -141,7 +145,11 @@
 -(void)startListening
 {
     if (! [recognizer isAvailable]) {
-        self.answView.text = @"Recognizer is unavailable. Network may be down.";
+        if (isOSVersion13orLater) {
+            self.answView.text = @"Recognizer is unavailable. Try again.";
+        } else {
+            self.answView.text = @"Recognizer is unavailable. Network may be down.";
+        }
         self.answView.textColor = [UIColor redColor];
         return;
     }
@@ -201,19 +209,6 @@
     }
 }
 
-// this is rarely called
-//- (void)viewDidUnload
-//{
-//    NSLog(@"EfiteSpeechTestViewController viewDidUnload");
-//    [self unload];
-//    [super viewDidUnload];
-//}
-
--(void)dealloc
-{
-    [super dealloc];
-}
-
 // use shake to shuffle the quiz
 - (BOOL)canBecomeFirstResponder {
     return YES;
@@ -222,16 +217,10 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (UIEventSubtypeMotionShake) {
         [self shuffleExample];
-        //[self stopSpeech];
-        //[self stopListening];
-        //qnum = arc4random_uniform((uint32_t) qsize);
-        //self.textView.text = pageMap[pageNum[qnum]];
-        //self.answView.text = @"";
-        //self.answView.textColor = [UIColor blueColor];
     }
 }
 
-- (void) shuffleExample
+- (void)shuffleExample
 {
     [self stopSpeech];
     [self stopListening];
@@ -307,8 +296,8 @@
     }
     [self unload];
     
-    // [self dismissViewControllerAnimated:YES completion:nil];
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)start:(id)sender

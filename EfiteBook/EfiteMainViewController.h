@@ -6,10 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <WebKit/WebKit.h>
 #import "EfiteFlipsideViewController.h"
 #import "EfiteSpeechTestViewController.h"
 
-@interface EfiteMainViewController : UIViewController <EfiteFlipsideViewControllerDelegate, UIWebViewDelegate, UIScrollViewDelegate>
+@interface EfiteMainViewController : UIViewController <EfiteFlipsideViewControllerDelegate, WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>
 {
     NSString *prefix;
     NSString *suffix;
@@ -17,7 +18,7 @@
     int page;
     int pageMin;
     int pageMax;
-    int ios;
+    //int ios;
     CGPoint previous;
     CGPoint contentOffset;
     float zoomScale;

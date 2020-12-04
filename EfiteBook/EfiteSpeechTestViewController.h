@@ -39,6 +39,7 @@
     NSUInteger qnum;
     BOOL listening;
     BOOL authorized;
+    BOOL isOSVersion13orLater;
 }
 
 @property (nonatomic, retain) NSDictionary *pageMap;

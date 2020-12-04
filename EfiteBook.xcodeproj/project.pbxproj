@@ -111,8 +111,10 @@
 		C96B29831F8ABF400067C15A /* EfiteSpeechTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96B29821F8ABF400067C15A /* EfiteSpeechTest.plist */; };
 		C97094381FDE650700B875DD /* Default-Landscape-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C97094371FDE650600B875DD /* Default-Landscape-812h@3x.png */; };
 		C970943A1FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C97094391FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png */; };
+		C982476824D136D700884951 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982476724D136D700884951 /* WebKit.framework */; };
 		C9A2B93815686FFB00BBA72C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A2B93715686FFB00BBA72C /* Icon-72@2x.png */; };
 		C9A2B9401568765900BBA72C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A2B93F1568765900BBA72C /* Default-Landscape~ipad.png */; };
+		C9DEF92324D695E000F57AB0 /* MyWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEF92224D695E000F57AB0 /* MyWKWebView.m */; };
 		C9EA1DA71E7E415200B82449 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DA61E7E415100B82449 /* Images.xcassets */; };
 		C9EA1DA91E7E477E00B82449 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DA81E7E477E00B82449 /* Icon-76.png */; };
 		C9EA1DAD1E7E47B300B82449 /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = C9EA1DAC1E7E47B300B82449 /* Icon-152.png */; };
@@ -141,9 +143,6 @@
 		C917AB271564C7AC007C3ACE /* EfiteMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfiteMainViewController.m; sourceTree = "<group>"; };
 		C917AB291564C7AC007C3ACE /* EfiteFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EfiteFlipsideViewController.h; sourceTree = "<group>"; };
 		C917AB2A1564C7AC007C3ACE /* EfiteFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EfiteFlipsideViewController.m; sourceTree = "<group>"; };
-		C917AB2D1564C7AC007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EfiteMainViewController_iPhone.xib; sourceTree = "<group>"; };
-		C917AB301564C7AC007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EfiteMainViewController_iPad.xib; sourceTree = "<group>"; };
-		C917AB331564C7AC007C3ACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EfiteFlipsideViewController.xib; sourceTree = "<group>"; };
 		C917ABD21564DCBA007C3ACE /* EfiteToc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EfiteToc.plist; sourceTree = "<group>"; };
 		C917ABD615662103007C3ACE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C917ABD815662111007C3ACE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -153,6 +152,10 @@
 		C9259BB61F8C92D300194C2A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C9259BB81F8C92E600194C2A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C9259BBA1F8C92F800194C2A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C94EA00A25788D4200517639 /* EfiteBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EfiteBook.entitlements; sourceTree = "<group>"; };
+		C94EA00B25788D8F00517639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EfiteMainViewController_iPhone.xib; sourceTree = "<group>"; };
+		C94EA00C25788D8F00517639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EfiteMainViewController_iPad.xib; sourceTree = "<group>"; };
+		C94EA00D25788D8F00517639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EfiteFlipsideViewController.xib; sourceTree = "<group>"; };
 		C960911817769D860073D5A1 /* EFITE2_ibook-page1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page1.pdf"; sourceTree = "<group>"; };
 		C960911917769D860073D5A1 /* EFITE2_ibook-page2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page2.pdf"; sourceTree = "<group>"; };
 		C960911A17769D860073D5A1 /* EFITE2_ibook-page3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "EFITE2_ibook-page3.pdf"; sourceTree = "<group>"; };
@@ -237,8 +240,11 @@
 		C96B29821F8ABF400067C15A /* EfiteSpeechTest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EfiteSpeechTest.plist; sourceTree = "<group>"; };
 		C97094371FDE650600B875DD /* Default-Landscape-812h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-812h@3x.png"; sourceTree = "<group>"; };
 		C97094391FDE651B00B875DD /* Default-Landscape-iPhone6Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-iPhone6Plus.png"; sourceTree = "<group>"; };
+		C982476724D136D700884951 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C9A2B93715686FFB00BBA72C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		C9A2B93F1568765900BBA72C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		C9DEF92124D6955E00F57AB0 /* MyWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyWKWebView.h; sourceTree = "<group>"; };
+		C9DEF92224D695E000F57AB0 /* MyWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWKWebView.m; sourceTree = "<group>"; };
 		C9EA1DA61E7E415100B82449 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C9EA1DA81E7E477E00B82449 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = SOURCE_ROOT; };
 		C9EA1DAC1E7E47B300B82449 /* Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152.png"; sourceTree = SOURCE_ROOT; };
@@ -254,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C982476824D136D700884951 /* WebKit.framework in Frameworks */,
 				C9259BBB1F8C92F900194C2A /* AVFoundation.framework in Frameworks */,
 				C9259BB51F8C859700194C2A /* Speech.framework in Frameworks */,
 				C917AB151564C7AB007C3ACE /* UIKit.framework in Frameworks */,
@@ -292,6 +299,7 @@
 		C917AB131564C7AB007C3ACE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C982476724D136D700884951 /* WebKit.framework */,
 				C9259BBA1F8C92F800194C2A /* AVFoundation.framework */,
 				C9259BB81F8C92E600194C2A /* AudioToolbox.framework */,
 				C9259BB61F8C92D300194C2A /* AVKit.framework */,
@@ -306,6 +314,7 @@
 		C917AB1A1564C7AB007C3ACE /* EfiteBook */ = {
 			isa = PBXGroup;
 			children = (
+				C94EA00A25788D4200517639 /* EfiteBook.entitlements */,
 				C917AB231564C7AC007C3ACE /* EfiteAppDelegate.h */,
 				C917AB241564C7AC007C3ACE /* EfiteAppDelegate.m */,
 				C917AB261564C7AC007C3ACE /* EfiteMainViewController.h */,
@@ -321,6 +330,8 @@
 				C96B297F1F8ABD900067C15A /* EfiteSpeechTestViewController.h */,
 				C96B29801F8ABDB30067C15A /* EfiteSpeechTestViewController.m */,
 				C90CC7DB1F90602C006A0BEB /* EfiteSpeechTestViewController_iPad.xib */,
+				C9DEF92124D6955E00F57AB0 /* MyWKWebView.h */,
+				C9DEF92224D695E000F57AB0 /* MyWKWebView.m */,
 			);
 			path = EfiteBook;
 			sourceTree = "<group>";
@@ -462,7 +473,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Efite;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					C917AB0F1564C7AB007C3ACE = {
 						ProvisioningStyle = Manual;
@@ -471,10 +482,11 @@
 			};
 			buildConfigurationList = C917AB0A1564C7AB007C3ACE /* Build configuration list for PBXProject "EfiteBook" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C917AB051564C7AB007C3ACE;
 			productRefGroup = C917AB111564C7AB007C3ACE /* Products */;
@@ -610,6 +622,7 @@
 				C917AB281564C7AC007C3ACE /* EfiteMainViewController.m in Sources */,
 				C917AB2B1564C7AC007C3ACE /* EfiteFlipsideViewController.m in Sources */,
 				C96B29811F8ABDB30067C15A /* EfiteSpeechTestViewController.m in Sources */,
+				C9DEF92324D695E000F57AB0 /* MyWKWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +640,7 @@
 		C917AB2C1564C7AC007C3ACE /* EfiteMainViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C917AB2D1564C7AC007C3ACE /* en */,
+				C94EA00B25788D8F00517639 /* Base */,
 			);
 			name = EfiteMainViewController_iPhone.xib;
 			sourceTree = "<group>";
@@ -635,7 +648,7 @@
 		C917AB2F1564C7AC007C3ACE /* EfiteMainViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C917AB301564C7AC007C3ACE /* en */,
+				C94EA00C25788D8F00517639 /* Base */,
 			);
 			name = EfiteMainViewController_iPad.xib;
 			sourceTree = "<group>";
@@ -643,7 +656,7 @@
 		C917AB321564C7AC007C3ACE /* EfiteFlipsideViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C917AB331564C7AC007C3ACE /* en */,
+				C94EA00D25788D8F00517639 /* Base */,
 			);
 			name = EfiteFlipsideViewController.xib;
 			sourceTree = "<group>";
@@ -655,6 +668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -667,6 +681,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -694,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "82a2b6a4-7e37-44d0-b87e-b600638a9cc8";
 				SDKROOT = iphoneos;
@@ -706,6 +721,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -718,6 +734,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -737,7 +754,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "82a2b6a4-7e37-44d0-b87e-b600638a9cc8";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -753,18 +770,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = EfiteBook/EfiteBook.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = WS4Q396ELP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EfiteBook/EfiteBook-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "EfiteBook/EfiteBook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haburesearch.${PRODUCT_NAME:rfc1034identifier}2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "710cbc9c-f8b7-4359-80b2-c1aa89f108bf";
-				PROVISIONING_PROFILE_SPECIFIER = HR_Generic_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = HR_Generic_Dev_2;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -776,18 +798,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = EfiteBook/EfiteBook.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = WS4Q396ELP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EfiteBook/EfiteBook-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "EfiteBook/EfiteBook-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haburesearch.${PRODUCT_NAME:rfc1034identifier}2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9c6053be-8c30-4d5a-8b9e-2953dc247617";
-				PROVISIONING_PROFILE_SPECIFIER = HR_Generic_Dist;
+				PROVISIONING_PROFILE_SPECIFIER = HR_Generic_Dist_2;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
