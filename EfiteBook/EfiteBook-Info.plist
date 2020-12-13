@@ -39,6 +39,8 @@
 	<string>マイクを使って発音練習をします。</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>音声認識を利用して英語の発音を練習します。</string>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv6</string>
