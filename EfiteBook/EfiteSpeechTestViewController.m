@@ -296,8 +296,8 @@
     }
     [self unload];
     
+    [(EfiteMainViewController*)self.presentingViewController stopActivityAnimation];
     [self dismissViewControllerAnimated:YES completion:nil];
-    //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)start:(id)sender

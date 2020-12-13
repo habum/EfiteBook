@@ -65,6 +65,12 @@
 
 -(void)viewDidLayoutSubviews
 {
+    // hide the PDF page counter
+    UIView *lastView = self.view.subviews.lastObject;
+    if (lastView != nil && ![lastView isKindOfClass:[UIScrollView class]]) {
+        lastView.hidden = YES;
+    }
+    
     // bring them front
     // AutoLayout of WKWebView does not work, so layout them here
     CGSize wvsize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
@@ -338,12 +344,17 @@
     [activity startAnimating];
 }
 
+- (void)stopActivityAnimation
+{
+    [activity stopAnimating];
+}
+
 //WKNavigationDelegate
 - (void)webView:(WKWebView *)webView
     didFinishNavigation:(WKNavigation *)navigation
 {
     [activity stopAnimating];
-    
+        
     // hide nav buttons on iPhone/iPod when showing an Internet page for page controls
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         //NSURLRequest *current = [(MyWKWebView*)self.view request];

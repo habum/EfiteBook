@@ -58,5 +58,6 @@
 -(void)goForwardPage;
 
 -(void)wakeUpWatchDog;
+-(void)stopActivityAnimation;
 
 @end

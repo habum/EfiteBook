@@ -109,8 +109,9 @@
 
 - (IBAction)done:(id)sender
 {
-    [self.delegate flipsideViewControllerDidFinish:self];
-    //[self dismissViewControllerAnimated:YES completion:nil];
+    [(EfiteMainViewController*)self.presentingViewController stopActivityAnimation];
+    //[self.delegate flipsideViewControllerDidFinish:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
